@@ -17,24 +17,20 @@ const Calculator = () => {
     const handleEngSliderChange = (event) => {
         setEngSliderValue(event.target.value);
     };
+
+    const engLevelValue = ["", "Базовый", "Средний", "Разговорный"]
     
     return (
         <div className="calc">
-            <div className="calc__inner">
-                <div className="calc__days">
-                    <div className="calc__quest">
+            <div className="calc_inner">
+                <div className="calc_days">
+                    <div className="calc_quest">
                         <p>Сколько дней в неделю хотите работать?</p>
                     </div>
-                    <div className="calc__numbs">
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <span>6</span>
-                        <span>7</span>
+                    <div className="calc_numbs">
+                        {daySlider}
                     </div>
-                    <div className="calc__range days">
+                    <div className="calc_range days">
                         <div className="slider-container">
                             <input
                                 step={1}
@@ -48,22 +44,19 @@ const Calculator = () => {
                         </div>
                     </div>
                 </div>
-                <div className="calc__hours">
-                    <div className="calc__quest">
+                <div className="calc_hours">
+                    <div className="calc_quest">
                         <p>Сколько часов в день?</p>
                     </div>
-                    <div className="calc__numbs">
-                        <span>3</span>
-                        <span>6</span>
-                        <span>9</span>
-                        <span>12</span>
+                    <div className="calc_numbs">
+                        {hourSlider}
                     </div>
-                    <div className="calc__range hours">
+                    <div className="calc_range hours">
                         <div className="slider-container">
                             <input
                                 step={3}
                                 type="range"
-                                min="1"
+                                min="3"
                                 max="12"
                                 value={hourSlider}
                                 onChange={handleHourSliderChange}
@@ -72,16 +65,14 @@ const Calculator = () => {
                         </div>
                     </div>
                 </div>
-                <div className="calc__level">
-                    <div className="calc__quest">
+                <div className="calc_level">
+                    <div className="calc_quest">
                         <p>Ваш уровень английского?</p>
                     </div>
-                    <div className="calc__numbs">
-                        <span>Базовый</span>
-                        <span>Средний</span>
-                        <span>Разговорный</span>
+                    <div className="calc_numbs">
+                        {engLevelValue[engSlider]}
                     </div>
-                    <div className="calc__range level range">
+                    <div className="calc_range level range">
                         <div className="slider-container">
                             <input
                                 step={1}
@@ -95,12 +86,12 @@ const Calculator = () => {
                         </div>
                     </div>
                 </div>
-                <div className="calc__order">
-                    <div className="calc__res">
+                <div className="calc_order">
+                    <div className="calc_res">
                         <p>Еженедельный заработок</p>
                         <span>${214 * daySlider + 125 * hourSlider + 500 * engSlider}</span>
                     </div>
-                    <div className="calc__button">
+                    <div className="calc_button">
                         <button className="calc__btn btn" data-hystmodal="#formStatement">Оставить заявку</button>
                     </div>
                 </div>

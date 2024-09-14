@@ -18,7 +18,7 @@ class Header extends Component {
                     <Container>
                         <Navbar.Brand href="/">
                             <img
-                            src={"star.png"}
+                            src={"/star.png"}
                             height={30}
                             width={30}
                             className="d-inline-block align-top"
@@ -29,14 +29,14 @@ class Header extends Component {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
                                 <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/For_models">For models</Nav.Link>
-                                <Nav.Link href="/calculator">Calculator</Nav.Link>
-                                <Nav.Link href="/job_openings">Job openings</Nav.Link>
-                                <Nav.Link href="/about_us">About us</Nav.Link>
-                                <Nav.Link href="/contacts">Contacts</Nav.Link>
-                                <Nav.Link href="/faq">FAQ</Nav.Link>
-                                <Nav.Link href="/reviews">Reviews</Nav.Link>
-                                <Nav.Link href="/gallery">Gallery</Nav.Link>
+                                <Nav.Link href="/src/Pages/for_models">For models</Nav.Link>
+                                <Nav.Link href="/src/Pages/calculator">Calculator</Nav.Link>
+                                <Nav.Link href="/src/Pages/job_openings">Job openings</Nav.Link>
+                                <Nav.Link href="/src/Pages/about_us">About us</Nav.Link>
+                                <Nav.Link href="/src/Pages/contacts">Contacts</Nav.Link>
+                                <Nav.Link href="/src/Pages/faq">FAQ</Nav.Link>
+                                <Nav.Link href="/src/Pages/reviews">Reviews</Nav.Link>
+                                <Nav.Link href="/src/Pages/gallery">Gallery</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
